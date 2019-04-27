@@ -41,7 +41,7 @@ function date({ list, ...rest } = {}) {
                     return setValue.call(this, prepareValue(value));
                 }
             };
-        })(createField({ ...rest, list, type: "object" }))
+        })(createField({ ...rest, list, type: "date" }))
     );
 }
 

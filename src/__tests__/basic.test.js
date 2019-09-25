@@ -7,7 +7,7 @@ const Company = compose(
         name: string(),
         createdOn: date()
     })
-)(function() {});
+)();
 
 const isoString = "2019-04-27T06:48:37.506Z";
 

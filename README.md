@@ -36,13 +36,13 @@ const Company = compose(
 const company = new Company();
 company.name = "Acme Corporation";
 
-// The `date` field can accept a Date object... 
+// The date field can accept a Date object... 
 company.createdOn = new Date();
 
-// or an ISO 8601 formatted date/time string.
+// ...or an ISO 8601 formatted date/time string.
 company.createdOn =  "2020-04-18T15:50:44.205Z";
 
-// The following will throw the WithFieldsError error:
+// The following will throw the WithFieldsError error.
 company.createdOn =  "2020-04-18";
 ```
 

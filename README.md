@@ -3,12 +3,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/doitadrian/commodo-fields-date/badge.svg?branch=master)](https://coveralls.io/github/doitadrian/commodo-fields-date?branch=master)
 [![](https://img.shields.io/npm/dw/commodo-fields-date.svg)](https://www.npmjs.com/package/commodo-fields-date) 
 [![](https://img.shields.io/npm/v/commodo-fields-date.svg)](https://www.npmjs.com/package/commodo-fields-date)
-![](https://img.shields.io/npm/types/commodo-fields-date.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
   
-A date field for Commodo composeable models. 
+A simple `date` field for the [Commodo](https://github.com/webiny/commodo) library. 
 
 ## Install
 ```
@@ -33,6 +32,18 @@ const Company = compose(
     createdOn: date()
   })
 )(function() {});
+
+const company = new Company();
+company.name = "Acme Corporation";
+
+// The `date` field can accept a Date object... 
+company.createdOn = new Date();
+
+// or an ISO 8601 formatted date/time string.
+company.createdOn =  "2020-04-18T15:50:44.205Z";
+
+// The following will throw the WithFieldsError error:
+company.createdOn =  "2020-04-18";
 ```
 
 ## Contributors

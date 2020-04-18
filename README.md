@@ -29,9 +29,11 @@ import { date } from "commodo-fields-date";
 const Company = compose(
   withFields({
     name: string(),
-    createdOn: date()
-  })
-)(function() {});
+    createdOn: date(),
+    // Other fields you might need...
+  }),
+  // Other higher order functions (HOFs) you might need...
+)();
 
 const company = new Company();
 company.name = "Acme Corporation";
